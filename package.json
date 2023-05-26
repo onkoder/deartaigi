@@ -4,9 +4,15 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "esbuild ./src/app.jsx --bundle --watch --outfile=dist/bundle.js --target=chrome58,firefox57,safari11,edge16",
+    "build": "esbuild ./src/app.jsx --bundle --outfile=dist/bundle.js --minify --target=chrome58,firefox57,safari11,edge16"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.17.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
